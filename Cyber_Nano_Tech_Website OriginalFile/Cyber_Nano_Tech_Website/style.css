@@ -1,0 +1,192 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #020024;
+  color: #e0f7fa;
+  scroll-behavior: smooth;
+  background: URL('nanocels.GIF') no-repeat center center/cover;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.container > h2 {
+  text-shadow: 2px 2px 6px aqua;
+}
+
+.container > p {
+  background: URL('Nanohatdog.JPG') no-repeat center center/cover;
+}
+
+.container1 > h6 {
+  text-align: center;
+  text-shadow: 2px 2px 5px aqua;
+}
+
+.header {
+  background: darkslategrey;
+  padding: 20px 0;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  text-shadow: 2px 2px 5px cyan;
+  position: fixed;
+}
+
+.logo {
+  float: left;
+  font-size: 2em;
+  color: #00d4ff;
+  text-shadow: 2px 2px 5px lightcyan;
+}
+
+.navbar {
+  float: right;
+}
+
+/* NAVBAR LINKS with GLOWING BASE STYLE */
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  color: #e0f7fa;
+  margin-left: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px cyan, 0 0 10px cyan;
+  display: inline-block;
+}
+
+/* Door-Opening Underline Effect */
+.navbar a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #00d4ff;
+  transform: translateX(-50%) scaleX(0); /* Start from center with no width */
+  transform-origin: center;
+  transition: transform 0.4s ease, width 0.4s ease;
+}
+
+/* When hovering over the links, make the underline open like a door */
+.navbar a:hover::after {
+  width: 100%; /* Full width of the link */
+  transform: translateX(-50%) scaleX(1); /* Expand from the center */
+}
+
+.navbar a.clicked {
+  animation: jumpGlow 0.8s ease forwards;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+
+@keyframes jumpGlow {
+  0% {
+    transform: translateZ(0) scale(1) rotateX(0deg);
+    text-shadow: 0 0 5px cyan, 0 0 10px cyan;
+  }
+  30% {
+    transform: translateY(-20px) translateZ(30px) scale(1.2) rotateX(15deg);
+    text-shadow: 0 0 20px cyan, 0 0 40px cyan, 0 0 60px cyan;
+  }
+  60% {
+    transform: translateY(0) translateZ(10px) scale(1.1) rotateX(-10deg);
+    text-shadow: 0 0 15px cyan, 0 0 30px cyan;
+  }
+  100% {
+    transform: translateZ(0) scale(1) rotateX(0deg);
+    text-shadow: 0 0 5px cyan, 0 0 10px cyan;
+  }
+}
+
+.hero {
+  background: URL('nanocels.GIF') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  background-color: darkcyan;
+  border-radius: 40px;
+  border: groove;
+  text-shadow: 2px 2px 5px darkcyan;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin: 20px 0;
+  border-radius: 25px;
+  background-color: darkcyan;
+  border: groove;
+  text-shadow: 2px 2px 5px darkcyan;
+}
+
+.btn-primary, .btn-secondary {
+  background: #00d4ff;
+  color: #020024;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-shadow: 3px 3px 6px darkcyan;
+  box-shadow: 0 0 0 4px #fff, 0 0 0 8px #0c78d0;
+  text-align: center;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #00d4ff;
+  color: #00d4ff;
+  text-shadow: 2px 2px 5px cyan;
+}
+
+.section {
+  padding: 100px 0 50px;
+}
+
+.services .service-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-shadow: 2px 2px 5px cyan;
+}
+
+.card {
+  background: rgba(0, 0, 50, 0.7);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-shadow: 2px 2px 5px cyan;
+}
+
+.contact-form button {
+  width: 25%;
+  text-align: center;
+}
+
+div > img {
+  max-width: 100%;
+  max-height: 100%;
+}
